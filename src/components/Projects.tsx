@@ -39,7 +39,7 @@ const projects = [
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     image: "/images/washmate.png",
     githubUrl: "https://github.com/habybheart1/WashMate",
-    liveUrl: "wash-mate-practice.vercel.app",
+    liveUrl: "https://washmatepractice.netlify.app/",
   },
 ];
 
