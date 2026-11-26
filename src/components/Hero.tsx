@@ -112,10 +112,6 @@ export default function Hero() {
               <span className="h-3 w-3 rounded-full bg-green-400"></span>
             </div>
 
-            <span className="text-xs text-slate-500">
-              abibat-portfolio.tsx
-            </span>
-
             <span className="text-xs text-green-500">
               ● Available
             </span>
