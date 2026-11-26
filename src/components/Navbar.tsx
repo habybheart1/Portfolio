@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 bg-white/90 px-6 py-5 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/90 md:px-16">
     {/* Brand Logo */}
-        <Link href="/" className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+        <Link href="/" className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
           AA
         </Link>
     <nav className="className=hidden items-center gap-8 md:flex">
@@ -33,7 +33,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors" ${
+                className={`text-base font-medium transition-colors" ${
                   isActive
                     ? "text-violet-900"
                     : "text-slate-600 hover:text-violet-600 dark:text-slate-300"
@@ -107,53 +107,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-// import ThemeToggle from "./ThemeToggle";
-
-// export default function Navbar() {
-//   return (
-//     <header className="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 bg-white/90 px-6 py-5 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/90 md:px-16">
-
-//       {/* Logo */}
-//       <a
-//         href="/"
-//         className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
-//       >
-//         A<span className="text-violet-600">.</span>
-//       </a>
-
-//       {/* Navigation Links */}
-//       <nav className="hidden items-center gap-8 md:flex">
-//         <a href="#about" className="text-slate-600 transition-colors hover:text-violet-600 dark:text-slate-300">
-//           About
-//         </a>
-
-//         <a href="#skills" className="text-slate-600 transition-colors hover:text-violet-600 dark:text-slate-300">
-//           Skills
-//         </a>
-
-//         <a href="#projects" className="text-slate-600 transition-colors hover:text-violet-600 dark:text-slate-300">
-//           Projects
-//         </a>
-
-//         <a href="#contact" className="text-slate-600 transition-colors hover:text-violet-600 dark:text-slate-300">
-//           Contact
-//         </a>
-//       </nav>
-
-//       {/* Right Side Actions */}
-//       <div className="flex items-center gap-4">
-
-//         <a
-//           href="#contact"
-//           className="rounded-full bg-slate-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-violet-700 dark:bg-violet-600 dark:hover:bg-violet-700"
-//         >
-//           Let's Talk
-//         </a>
-
-//         <ThemeToggle />
-//       </div>
-
-//     </header>
-//   );
-// }

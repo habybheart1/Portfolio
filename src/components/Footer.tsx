@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Logo and identity */}
         <a
           href="/"
-          className="text-xl font-bold tracking-tight text-slate-900 dark:text-white"
+          className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
         >
           AA
         </a>
@@ -25,7 +25,7 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm transition hover:text-violet-600"
+              className="text-base transition hover:text-violet-600"
             >
               {link.label}
             </a>
@@ -33,7 +33,7 @@ export default function Footer() {
         </nav>
 
         {/* Copyright */}
-        <p className="text-center text-sm">
+        <p className="text-center text-base">
           © 2026 Abibat Olamide. All rights reserved.
         </p>
       </div>

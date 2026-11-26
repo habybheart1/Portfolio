@@ -1,27 +1,30 @@
 import Image from "next/image"
 
-const heading = "Building digital experiences that make a difference.";
-
 function AnimatedHeading() {
   return (
-    <h1
-      aria-label={heading}
-      className="mt-6 max-w-4xl text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
-    >
-      <span aria-hidden="true">
-        {Array.from(heading).map((letter, index) => (
-          <span
-            key={index}
-            className="letter-reveal inline-block"
-            style={{
-              animationDelay: `${index * 0.045}s`,
-            }}
-          >
-            {letter === " " ? "\u00A0" : letter}
-          </span>
-        ))}
-      </span>
-    </h1>
+    <h1 className="max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+  {[
+    "Building digital",
+    "experiences that",
+    "make a difference.",
+  ].map((line, lineIndex) => (
+    <span key={lineIndex} className="block">
+      {line.split("").map((letter, index) => (
+        <span
+          key={index}
+          className="letter-reveal"
+          style={{
+            animationDelay: `${
+              (lineIndex * 30 + index) * 0.045
+            }s`,
+          }}
+        >
+          {letter === " " ? "\u00A0" : letter}
+        </span>
+      ))}
+    </span>
+  ))}
+</h1>
   );
 }
 
@@ -29,13 +32,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="overflow-hidden bg-slate-50 px-6 py-12 text-slate-900 dark:bg-slate-950 dark:text-white md:px-10 lg:py-18"
+      className="overflow-hidden bg-slate-50 px-6 py-12 text-slate-900 dark:bg-slate-950 dark:text-white md:px-10 lg:py-16"
     >
-      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
 
         {/* LEFT SIDE - INTRODUCTION */}
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-700 dark:border-violet-900 dark:bg-violet-950/50 dark:text-violet-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-4 py-4 text-sm font-medium text-violet-700 dark:border-violet-900 dark:bg-violet-950/50 dark:text-violet-300">
             <span className="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
             Frontend Developer
           </div>

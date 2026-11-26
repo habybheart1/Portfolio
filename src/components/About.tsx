@@ -24,12 +24,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-white px-6 py-24 text-slate-900 dark:bg-slate-900 dark:text-white md:px-16"
+      className="bg-white px-6 py-16 text-slate-900 dark:bg-slate-900 dark:text-white md:px-16"
     >
       <div className="mx-auto max-w-7xl">
 
         {/* Section Heading */}
-        <div className="mb-4">
+        <div className="mb-4 mt-4">
           <p className="mb-1 text-sm font-semibold uppercase tracking-[0.25em] text-violet-600">
             Get to know me
           </p>
@@ -63,7 +63,7 @@ export default function About() {
 
           {/* Right: Professional Profile Card */}
           <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-950 sm:p-9">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 px-6 dark:border-slate-800 dark:bg-slate-950 sm:p-9">
 
               <div className="mb-8 flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-100 text-xl font-bold text-violet-700 dark:bg-violet-950 dark:text-violet-300">
@@ -133,7 +133,7 @@ export default function About() {
         </div>
 
         {/* Professional Strengths */}
-        <div className="mt-12">
+        <div className="mt-8">
           <div className="mb-5">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-violet-600">
               What I bring
