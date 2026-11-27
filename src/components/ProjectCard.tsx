@@ -1,6 +1,5 @@
-
 import Image from "next/image";
-import ProjectCardProps from "@/types/productCard"
+import type ProjectCardProps from "@/types/projectCard";
 
 export default function ProjectCard({
   title,
@@ -12,17 +11,15 @@ export default function ProjectCard({
   category,
 }: ProjectCardProps) {
   return (
-    <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950">
-
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950">
       {/* Project Image / Preview */}
       <div className="relative aspect-16/10 overflow-hidden bg-slate-100 dark:bg-slate-800">
-
         {image ? (
           <Image
             src={image}
             alt={`${title} project screenshot`}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
@@ -42,13 +39,11 @@ export default function ProjectCard({
         <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-violet-700 backdrop-blur dark:bg-slate-900/90 dark:text-violet-300">
           {category}
         </span>
-
       </div>
 
       {/* Project Details */}
-      <div className="p-6">
-
-        <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-violet-600 dark:text-white">
+      <div className="flex flex-1 flex-col p-6">
+        <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-violet-600 dark:text-white dark:group-hover:text-violet-400">
           {title}
         </h3>
 
@@ -70,16 +65,15 @@ export default function ProjectCard({
 
         {/* Project Links */}
         {(githubUrl || liveUrl) && (
-          <div className="mt-7 flex items-center gap-5 border-t border-slate-100 pt-5 dark:border-slate-800">
-
+          <div className="mt-auto flex items-center gap-5 border-t border-slate-100 pt-5 dark:border-slate-800">
             {githubUrl && (
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-slate-700 transition-colors hover:text-violet-600 dark:text-slate-300 dark:hover:text-violet-400"
+                className="mt-2 text-sm font-semibold text-slate-700 transition-colors hover:text-violet-600 dark:text-slate-300 dark:hover:text-violet-400"
               >
-                GitHub 
+                GitHub
               </a>
             )}
 
@@ -88,15 +82,13 @@ export default function ProjectCard({
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-violet-600 transition-colors hover:text-violet-700 dark:text-violet-400"
+                className="mt-2 text-sm font-semibold text-violet-600 transition-colors hover:text-violet-700 dark:text-violet-400 dark:hover:text-violet-300"
               >
-                Live Demo 
+                Live Demo
               </a>
             )}
-
           </div>
         )}
-
       </div>
     </article>
   );
